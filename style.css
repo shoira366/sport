@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Arial',sans-serif;
+}
+.box{
+    width: 700px;
+    padding: 20px 15px;
+    margin: 100px auto;
+    border:2px dashed grey;
+    padding-left: 30px;
+}
+.sport_title{
+    margin-bottom: 25px;
+    font-size: 35px;
+}
+.form{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.checkbox{
+    position: absolute;
+    
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+/* ---------tanlangan disabled holati----------- */
+.checkbox:disabled + .tennis{
+    background-image: url('./images/table-tennis.png');
+    background-repeat: no-repeat;
+    background-position: center;
+   background-size: 20px;
+   opacity: 0.5;
+}
+.checkbox:disabled ~ .checkbox_text{
+    opacity: 0.5;
+}
+/* ---------tanlanmagan disabled holati--------- */
+.checkbox:disabled + .basketbol{
+    /* background-image: url('./images/basketball-ball.png');
+    background-repeat: no-repeat;
+    background-position: center; */
+   /* background-size: 20px; */
+   opacity: 0.5;
+}
+.checkbox:checked + .voleybol{
+    background-image: url('./images/volleyball-ball.png');
+    background-repeat: no-repeat;
+    background-position: center;
+   background-size: 20px;
+}
+.checkbox:checked + .hokkey{
+    background-image: url('./images/hockey-puck.png');
+    background-repeat: no-repeat;
+    background-position: center;
+   background-size: 20px;
+}
+.checkbox:disabled + .hokkey{
+    background-image: url('./images/hockey-puck.png');
+    background-repeat: no-repeat;
+    background-position: center;
+   background-size: 20px;
+}
+.checkbox_control{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+.label{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.checkbox_text{
+    color: #070707;
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 15px;
+}
